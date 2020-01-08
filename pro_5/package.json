@@ -11,7 +11,10 @@
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
     "antd": "^3.26.6",
+<<<<<<< HEAD
     "axios": "^0.19.0",
+=======
+>>>>>>> b8c31960bd361bc72e41a89e0caec39ef1f81072
     "babel-eslint": "10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "8.0.6",
