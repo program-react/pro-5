@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import styles from './login.module.less'
 import  {UserLogin} from  '../../api/user'
+<<<<<<< HEAD
 import {setItem} from '../../utils/webStorage'
+=======
+>>>>>>> 78b1ae9ac09f9ee9ddcd245cf8d9c004ba8ac853
 import {Card,Form,Input,Icon,Checkbox,Button,message} from 'antd'
 class Login  extends Component{
 login=()=>{
@@ -11,6 +14,7 @@ login=()=>{
    //err 前端的字段验证 true 不通过 null 没问题
    if(err) return  message.error('输入有误,请重试!',1)
    //字段验证ok 继续向下
+<<<<<<< HEAD
    let {userName,passWord} =data
    UserLogin({userName,passWord})
    .then((res)=>{
@@ -18,6 +22,12 @@ login=()=>{
      setItem('token',res.token)
      setItem('uid',res.uid)
      setItem('rootIds',res.rootList)
+=======
+   let {us,ps} =data
+   UserLogin(us,ps)
+   .then((res)=>{
+     console.log('then',res)
+>>>>>>> 78b1ae9ac09f9ee9ddcd245cf8d9c004ba8ac853
      message.success('登录成功，1s后跳转首页',1,()=>{
        this.props.history.replace('/admin/home')
      })
@@ -26,8 +36,13 @@ login=()=>{
      message.error('登录失败请重试',1)
    })
   })
+<<<<<<< HEAD
   // let result =getFieldsValue()
   // console.log(result)
+=======
+  let result =getFieldsValue()
+  console.log(result)
+>>>>>>> 78b1ae9ac09f9ee9ddcd245cf8d9c004ba8ac853
 }
 render() {
   let {getFieldDecorator} = this.props.form
@@ -35,7 +50,11 @@ render() {
     <div className={styles.login}>
       <Card  title='用户登录' className={styles['login-card']}>
         <Form.Item>   
+<<<<<<< HEAD
           {getFieldDecorator('userName',{
+=======
+          {getFieldDecorator('us',{
+>>>>>>> 78b1ae9ac09f9ee9ddcd245cf8d9c004ba8ac853
             rules: [{ required: true, message: '用户名不能为空!' },
                     { min:3, message: '用户名不能小于3位字符!' },
                     { max:9, message: '用户名不能大于9位字符!' }]
@@ -48,7 +67,11 @@ render() {
           )}  
         </Form.Item>
         <Form.Item>   
+<<<<<<< HEAD
           {getFieldDecorator('passWord',{
+=======
+          {getFieldDecorator('ps',{
+>>>>>>> 78b1ae9ac09f9ee9ddcd245cf8d9c004ba8ac853
             rules:[{required:true,message:'用户密码不能为空'}]
           })(
             <Input
