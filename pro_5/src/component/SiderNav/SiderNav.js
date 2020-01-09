@@ -26,6 +26,26 @@ const menuData = [
     
         },
         {
+            name:'权限管理',
+            icon:'',
+            path:'/admin/root',
+            id:'1' ,
+            children:[{
+                name:'角色列表',
+                icon:'',
+                path:'/admin/root/rolelist',
+                id:'1-0', 
+            },
+            {
+                name:'权限列表',
+                icon:'',
+                path:'/admin/root/authlist',
+                id:'1-1' ,
+            }]
+        
+        
+        },
+        {
             name: '商品管理',
             icon: 'shopping',
             path: '/admin/goods',
@@ -61,6 +81,7 @@ const menuData = [
         ] 
         
         }
+        
     
 ]
 const {SubMenu} = Menu

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React,{Component,Fragment} from 'react'
-
-class Home extends Component{
-    render() {
-        return (
-           <div>
-             home
-           </div>
-          )
-           
-      
-        
-=======
 import React, { Component, Fragment } from 'react'
 import ReactEcharts from 'echarts-for-react';
 import styles from './date.module.less'
@@ -56,7 +42,6 @@ class Home extends Component {
             data: [{ value: 20, name: '首页' },]
           }
         ]
->>>>>>> 78b1ae9ac09f9ee9ddcd245cf8d9c004ba8ac853
       }
     }
   }
