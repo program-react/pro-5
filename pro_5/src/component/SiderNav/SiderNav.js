@@ -11,6 +11,21 @@ const menuData = [
     
         }, 
         {
+            name: '用户管理',
+            icon: 'user',
+            path: '/admin/user',
+            id: '1',
+            children: [
+                {
+                    name: '用户列表',
+                    path: '/admin/user/list',
+                    icon: ' ',
+                    id: '1-0',
+                },
+            ]
+    
+        },
+        {
             name: '商品管理',
             icon: 'shopping',
             path: '/admin/goods',
@@ -23,13 +38,28 @@ const menuData = [
                     id: '2-0',
                 },
                 {
-                    name: '商品添加',
+                    name: '商品分类',
                     icon: ' ',
                     id: '2-1',
-    
+                    path: '/admin/goods/goodstype',
                 }
             ]
     
+        },
+        {
+            name:'订单管理',
+            icon:'',
+            path:'/admin/order',
+            id:'4' ,
+            children:[
+            {
+                name:'订单列表',
+                
+                path:'/admin/order/order',
+                id:'4-1' ,
+            }
+        ] 
+        
         }
     
 ]
