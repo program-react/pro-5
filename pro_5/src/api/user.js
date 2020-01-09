@@ -1,5 +1,4 @@
 import axios from '../utils/axios'
-import {getItem} from '../utils/webStorage'
 // 登录
 export const UserLogin=(us,ps)=>{
   return new Promise((resolve,reject)=>{
@@ -21,13 +20,13 @@ export const UserLogin=(us,ps)=>{
 
 // 登出
 
-export const UserLogout = async ()=>{
-  let url='/hehe/admin/user/logout' 
-  let uid=getItem('uid')||''
-  let result = await axios.post(url,{uid})
-  if(result.err==0){
-    return result
-  }else{
-    throw result
-  }
-}
+// export const UserLogout = async ()=>{
+//   let url='/hehe/admin/user/logout' 
+//   let uid=getItem('uid')||''
+//   let result = await axios.post(url,{uid})
+//   if(result.err==0){
+//     return result
+//   }else{
+//     throw result
+//   }
+// }
