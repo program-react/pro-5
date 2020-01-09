@@ -7,78 +7,27 @@ const menuData=[{
     path:'/admin/home',
     id:'0'
 },
-{
-    name:'用户管理',
-    icon:'setting',
-    path:'/admin/setting',
-    id:'1' ,
-    children:[{
-        name:'用户列表',
-        icon:'',
-        path:'',
-        id:'2-0', 
-    },
-  ] 
 
-},
 {
     name:'权限管理',
     icon:'',
-    path:'',
-    id:'2' ,
+    path:'/admin/root',
+    id:'1' ,
     children:[{
-        name:'权限列表',
+        name:'角色列表',
         icon:'',
-        path:'',
-        id:'2-0', 
+        path:'/admin/root/rolelist',
+        id:'1-0', 
     },
     {
-        name:'权限管理',
+        name:'权限列表',
         icon:'',
-        path:'',
-        id:'2-1' ,
+        path:'/admin/root/authlist',
+        id:'1-1' ,
     }]
 
 
-},
-{
-    name:'商品管理',
-    icon:'setting',
-    path:'/admin/setting',
-    id:'3'  ,
-    children:[{
-        name:'商品列表',
-        icon:'',
-        path:'',
-        id:'3-0', 
-    },
-    {
-        name:'分类管理',
-        icon:'',
-        path:'',
-        id:'3-1' ,
-    }]
-
-},
-{
-    name:'订单管理',
-    icon:'',
-    path:'',
-    id:'4' ,
-    children:[{
-        name:'权限列表',
-        icon:'',
-        path:'',
-        id:'4-0', 
-    },
-    {
-        name:'订单列表',
-        icon:'',
-        path:'',
-        id:'4-1' ,
-    }] 
-
-},
+}
 ]
 const { SubMenu } = Menu;
 class SliderNav extends Component{
@@ -92,7 +41,17 @@ class SliderNav extends Component{
                     </SubMenu> 
                  )
             }else{
-            return <Menu.Item>{item.name}</Menu.Item>
+                return (
+
+                <Menu.Item >
+                    <Link to={item.path || '/admin'}>
+                        <span>
+                            <Icon type={item.icon || 'home'}></Icon>
+                            <span>{item.name || 'hehe'}</span>
+                        </span>
+                    </Link>
+                </Menu.Item>
+                )
             }
         })
         return result
