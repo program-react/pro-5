@@ -34,6 +34,22 @@ class Admin extends Component {
                     console.log(this.props.history)
                      this.props.history.push('/admin/user/list')
                 }}>用户列表</ Button>
+                < Button onClick={() => {
+                    console.log(this.props.history)
+                     this.props.history.push('/admin/goods/goodslist')
+                }}>商品列表</ Button>
+                < Button onClick={() => {
+                    console.log(this.props.history)
+                     this.props.history.push('/admin/goods/goodstype')
+                }}>商品分类</ Button>
+                < Button onClick={() => {
+                    console.log(this.props.history)
+                     this.props.history.push('/admin/order')
+                }}>订单管理</ Button>
+                <Button type="primary" className ={styles.btnAdmin} onClick={() => {
+                    console.log(this.props.history)
+                     this.props.history.push('/login')
+                }}>Admin</Button>
           </Header>
           <Content
             style={{
