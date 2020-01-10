@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import ReactEcharts from 'echarts-for-react';
-import styles from './date.module.less'
+import styles from './home.module.less'
 import { List, Avatar, Button } from 'antd';
 import { Link } from 'react-router-dom'
 
@@ -25,7 +25,7 @@ const data = [
     title: '订单管理',
     desc: '查看订单信息/订单管理/订单修改'
 
-  }
+  },
   
 ];
 class Home extends Component {
