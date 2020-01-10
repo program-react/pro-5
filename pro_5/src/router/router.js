@@ -17,14 +17,14 @@ class AppRouter extends Component {
         <HashRouter>
             <NavLink to='/login'></NavLink>
             <Switch>
-                {/* <Redirect exact from='/' to='/login'></Redirect> */}
+                <Redirect exact from='/' to='/login'></Redirect>
                 <Route path='/login' component={Login}></Route>
                 <Route path='/admin' render={()=>{
                     return(
                         <Admin>
                             <Switch>
 
-                                {/* <Redirect exact from='/admin' to='/admin/home'></Redirect> */}
+                                <Redirect exact from='/admin' to='/admin/home'></Redirect>
                                 <Route path='/admin/home' component={Home}></Route>
                                 <Route path='/admin/root/add' component={RolesAdd}></Route>
                                 <Route path='/admin/root/rolelist' component={RolesList}></Route>
