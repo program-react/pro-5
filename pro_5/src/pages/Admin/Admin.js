@@ -36,6 +36,10 @@ class Admin extends Component {
                 }}>用户列表</ Button>
                 < Button onClick={() => {
                     console.log(this.props.history)
+                     this.props.history.push('/admin/root/rolelist')
+                }}>权限管理</ Button>
+                < Button onClick={() => {
+                    console.log(this.props.history)
                      this.props.history.push('/admin/goods/goodslist')
                 }}>商品列表</ Button>
                 < Button onClick={() => {
