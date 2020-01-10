@@ -13,6 +13,10 @@ const data = [
     path: '/admin/user/list',
   },
   {
+    title: '权限管理',
+    desc: '查看用户状态'
+  },
+  {
     title: '商品管理',
     desc: '查看商品信息/商品列表/商品添加'
 
@@ -21,11 +25,8 @@ const data = [
     title: '订单管理',
     desc: '查看订单信息/订单管理/订单修改'
 
-  },
-  {
-    title: '权限管理',
-    desc: '查看用户状态'
-  },
+  }
+  
 ];
 class Home extends Component {
 
