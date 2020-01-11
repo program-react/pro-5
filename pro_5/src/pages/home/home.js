@@ -14,7 +14,7 @@ const data = [
   },
   {
     title: '权限管理',
-    desc: '查看用户状态'
+    desc: '角色管理/权限列表'
   },
   {
     title: '商品管理',
@@ -60,7 +60,7 @@ class Home extends Component {
       this.setState({ option }, () => {
         // console.log(this)
       })
-    }, 3000);
+    }, 1000);
   }
   componentDidUpdate() {
     console.log('图表更新结束')

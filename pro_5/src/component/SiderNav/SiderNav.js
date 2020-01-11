@@ -13,12 +13,12 @@ const menuData = [
         {
             name: '用户管理',
             icon: 'user',
-            path: '/admin/user',
+            path: '/admin/userlist',
             id: '1',
             children: [
                 {
                     name: '用户列表',
-                    path: '/admin/user/list',
+                    path: '/admin/userlist/list',
                     icon: ' ',
                     id: '1-0',
                 },

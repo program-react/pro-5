@@ -6,7 +6,7 @@ class Login  extends Component{
 login=()=>{
   let {getFieldsValue,validateFields}=this.props.form
   validateFields((err,data)=>{
-   console.log(err,data)
+   console.log('1',err,data)
    //err 前端的字段验证 true 不通过 null 没问题
    if(err) return  message.error('输入有误,请重试!',1)
    //字段验证ok 继续向下
@@ -29,6 +29,13 @@ render() {
   let {getFieldDecorator} = this.props.form
   return (
     <div className={styles.login}>
+      <div className={styles.dd}>
+      <video  width="100%" height="90%" id="video" autoPlay={true} loop={true} x-webkit-airplay={true} airplay='allow' webkit-playsInline={true} playsInline={true} src="https://www.tencent.com/video/index-video.mp4" ></video>
+      </div>
+        <div className={styles.txt}>
+          <p  className={styles.connect}><i>连接你我</i></p >
+          <p  className={styles.future}><i>共生未来</i></p >
+        </div>
       <Card  title='用户登录' className={styles['login-card']}>
         <Form.Item>   
           {getFieldDecorator('us',{

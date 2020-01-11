@@ -23,13 +23,12 @@ class AppRouter extends Component {
                     return(
                         <Admin>
                             <Switch>
-
                                 <Redirect exact from='/admin' to='/admin/home'></Redirect>
                                 <Route path='/admin/home' component={Home}></Route>
                                 <Route path='/admin/root/add' component={RolesAdd}></Route>
                                 <Route path='/admin/root/rolelist' component={RolesList}></Route>
                                 <Route path='/admin/root/authlist' component={AuthList}></Route>
-                                <Route path='/admin/user/list' component={List}></Route>
+                                <Route path='/admin/userlist/list' component={List}></Route>
                                 <Route path='/admin/goods/goodslist' component={Goodslist}></Route>
                                 <Route path='/admin/goods/goodstype' component={Goodstype}></Route>
                                 <Route path='/admin/order' component={Order}></Route>

@@ -95,8 +95,8 @@ del(id){
     this.setState({spinning:true})
     getData(nowPage,pageSize)
     .then((res)=>{
-      // console.log(res.data.list.data)
-      this.setState({dataSource:res.data.list.data,allCount:res.data.list.allCount,spinning:false})
+      console.log(res)
+      this.setState({dataSource:res.list.data,allCount:res.list.allCount,spinning:false})
     })
   }
     render() {
@@ -117,7 +117,7 @@ del(id){
           total={this.state.allCount} 
           pageSize={this.state.pageSize} 
           onChange={(page)=>{
-            console.log('目标页数',page,pageSize)
+            // console.log('目标页数',page,pageSize)
             this.getTableData(page)
           }}
         />

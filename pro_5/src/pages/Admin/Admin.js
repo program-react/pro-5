@@ -29,10 +29,10 @@ class Admin extends Component {
                     console.log(this.props.history)
                      this.props.history.push('/admin/home')
                 }}>首页</ Button>
-            < Button>用户管理</ Button>
+           
              < Button onClick={() => {
                     console.log(this.props.history)
-                     this.props.history.push('/admin/user/list')
+                     this.props.history.push('/admin/userlist/list')
                 }}>用户列表</ Button>
                 < Button onClick={() => {
                     console.log(this.props.history)
@@ -51,24 +51,29 @@ class Admin extends Component {
                      this.props.history.push('/admin/order')
                 }}>订单管理</ Button>
                 <Button type="primary" className ={styles.btnAdmin} onClick={() => {
-                    console.log(this.props.history)
-                     this.props.history.push('/login')
+                  setTimeout (() => {
+                    alert('已退出，即将跳转登录界面')
+                    this.props.history.push('/login')
+                }, 1000);
+                    
+                     
                 }}>Admin</Button>
           </Header>
           <Content
             style={{
               margin: '24px 16px',
               padding: 24,
-              background: '#fff',
+              background: '#ddd',
               minHeight: 300,
             }}
             className={styles.content}
           >
+         
             {this.props.children}
           </Content>
-          <Footer>
+          {/* <Footer>
             这里是底部
-      </Footer>
+      </Footer> */}
         </Layout>
       </Layout>
     )
