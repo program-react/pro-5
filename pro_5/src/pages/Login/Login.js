@@ -66,10 +66,11 @@ render() {
               <a className="login-form-forgot" href="">
                 Forgot password
               </a>
-              <Button type="primary" onClick={this.login}>
+              <hr/>
+              <Button type="primary" onClick={this.login} style={{marginLeft:110}}>
                 Log in
               </Button>
-              Or <a href="">register now!</a>
+              
             </Form.Item>
         </Card> 
     </div>

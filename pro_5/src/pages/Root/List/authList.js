@@ -2,7 +2,7 @@ import React, { Component,Fragment } from 'react';
 import {Table,Pagination,Spin,Button,Popconfirm, message,Drawer} from 'antd'
 import {GetAuth} from  '../../../api/root'
 
-const pageSize=3
+const pageSize=10
 class AuthList extends Component{
   constructor(){
     super()
@@ -66,7 +66,8 @@ class AuthList extends Component{
           dataSource={dataSource}
           rowKey='_id'
           pagination={false}
-          scroll={{y:280,x:500}}
+          scroll={{y:450,x:500}}
+          style={{height:500}}
           ></Table>
         </Spin>
         <Pagination 
@@ -77,6 +78,7 @@ class AuthList extends Component{
             console.log('目标页数',page)
             this.getTableData(page)
           }}
+          style={{marginTop:20}}
         />
       </div>
     );

@@ -17,20 +17,7 @@ class RolesAdd extends Component{
     .then(()=>{message.success('添加ok',1)})
     .catch((err)=>{ message.error('添加失败',1)})
   }
-  // upload=()=>{
-  //   // 获取图片 
-    
-  //   let file = this.refs.file.files[0]
-  //   if(!file) return message.info('请先选择图片')
-  //   // 创建文件读取对象
-  //   let reader = new FileReader()
-  //   // 将图片读成base64 
-  //   reader.onload=()=>{
-  //     console.log('文件转化结束',reader.result)
-  //     this.setState({img:reader.result})
-  //   }
-  //   reader.readAsDataURL(file)
-  // }
+ 
   render(){
     let {name,desc} = this.state
     return (
@@ -41,29 +28,14 @@ class RolesAdd extends Component{
           }}
           />
           <br/>
-          {/* price: <input type='text' value={price} 
-          onChange={(e)=>{
-            this.setState({price:e.target.value})
-          }}
-          />
-          <br/>
-          foodType: <input type='text' value={foodType} 
-          onChange={(e)=>{
-            this.setState({foodType:e.target.value})
-          }}
-          />
-          <br/> */}
+          
           desc: <input type='text' value={desc} 
           onChange={(e)=>{
             this.setState({desc:e.target.value})
           }}
           />
           <br/>
-          {/* 缩略图: <input type='file' ref='file'/>
-          <img widht='100' height='100' src={img} alt=""/>
-          <button onClick={this.upload}>上传图片</button>
           
-          <br/> */}
 
           <Button type='primary' onClick={this.submit}>提交</Button>
       </div>
