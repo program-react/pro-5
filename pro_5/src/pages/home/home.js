@@ -69,7 +69,7 @@ class Home extends Component {
     console.log('图标render')
     let { option } = this.state
     return (
-      <div style={{ width: '400px', height: '400px', border: '3px solid #eee', marginTop: '30' }} className={styles.data}>
+      <div style={{ width: '400px', height: '400px', border: '3px solid #eee', marginTop: 70,marginLeft:40}} >
         <h3 style={{ textAlign: 'center' }} className={styles.h3}>系统访问量</h3>
         <ReactEcharts option={option}></ReactEcharts>
 
