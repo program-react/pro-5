@@ -108,8 +108,8 @@ del(id){
           dataSource={this.state.dataSource}
           rowKey='_id'
           pagination={false}
-          scroll={{y:300,x:500}}
-          style={{height:370}}
+          scroll={{y:200,x:500}}
+          style={{height:270}}
           ></Table>
         </Spin>
         <Pagination 

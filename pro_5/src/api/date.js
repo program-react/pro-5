@@ -1,11 +1,12 @@
 // import axios from '../utils/axios'
 import axios from 'axios'
 
-export const  getData = ()=>{
-    console.log('获取数据')
+export const  getData = (page,pageSize)=>{
+     let data={page,pageSize}
+    // console.log('获取数据')
     return new Promise((resolve,reject)=>{
       let url='/hehe/admin/userlist/getData' 
-      axios.get(url).then((res)=>{resolve(res)})
+      axios.get(url,{params:data}).then((res)=>{resolve(res)})
       .catch((err)=>{reject(err)})
     })
   }
@@ -23,6 +24,7 @@ export const  getData = ()=>{
 
   export const AddData = async ({number,name,telp,token,status})=>{
     let url='/hehe/admin/userlist/add' 
+   
     let result = await axios.post(url,{number,name,telp,token,status})
     console.log({number,name,telp,token,status})
     if(result.err==0){

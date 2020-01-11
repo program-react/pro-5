@@ -127,8 +127,8 @@ class GoodsList extends Component {
             dataSource={dataSource}
             rowKey='_id'
             pagination={false}
-            scroll={{ y: 400, x: 500 }}
-            style={{ height: 500 }}
+            scroll={{ y: 200, x: 500 }}
+            style={{ height: 300 }}
           ></Table>
         </Spin>
         <Pagination
